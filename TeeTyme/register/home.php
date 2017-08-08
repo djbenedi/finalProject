@@ -7,7 +7,7 @@ if(!isset($_SESSION['username'])){ //if login in session is not set
 
 
 //connect to database
- $db=mysqli_connect("localhost","djbenedi","Dani102403","djbenedi");
+ $db=mysqli_connect("localhost","djbenedi","","djbenedi");
 require "../../../database/database.php";
 include "../fileDownload.php";
 // $db=Database::connectMysqli();
@@ -58,7 +58,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size']>0)
    {
      $fileName = addslashes($fileName);
    }
-  $con = mysql_connect('localhost','djbenedi','Dani102403') 
+  $con = mysql_connect('localhost','djbenedi','') 
     or die(mysql_error());
   $db  = mysql_select_db('djbenedi',$con);
   if($db)
@@ -74,7 +74,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size']>0)
     echo "file upload failed: " . mysql_error();
   }
 }
-mysql_connect("localhost","djbenedi","Dani102403");
+mysql_connect("localhost","djbenedi","");
 mysql_select_db("djbenedi");
 
 
