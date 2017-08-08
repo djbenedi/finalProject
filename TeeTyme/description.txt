@@ -1,0 +1,8 @@
+This app is for golfers so they may record their scores from each round. Golfers may create a user, and then choose
+the ID of their user along with the ID of a golf course so they may play a round. When beginning a new round,
+golfers may enter "0" for their scores until they have played that hole. If only playing 9 holes, they may
+leave the score for the remaining 9 holes as "0." Golfers can look up other golfers and their IDs, along with the course
+and their IDs as well. 
+
+This app keeps track of the golfer's name, mobile, and email. The courses are tracked by their name and the
+address of the course.

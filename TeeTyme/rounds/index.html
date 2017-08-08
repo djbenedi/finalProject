@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $( document ).ready(function() { 
+            personsRequest("displayList");
+        });
+        
+        // Submit a request to the persons table.
+        function personsRequest(action, id) {
+		  $.post(
+                "index.php",
+                "table="   + "tt_rounds"          +
+                "&action=" + action             +
+                "&id="     + id                 +
+				"&persons_id=" + $("persons_id").val() +
+				"&courses_id=" + $("courses_id").val() +
+                "&round_01=" + $("#round_01").val() +
+                "&round_02=" + $("#round_02").val() +
+                "&round_03=" + $("#round_03").val() +
+				"&round_04=" + $("#round_04").val() +
+                "&round_05=" + $("#round_05").val() +
+				"&round_06=" + $("#round_06").val() +
+                "&round_07=" + $("#round_07").val() +
+				"&round_08=" + $("#round_08").val() +
+                "&round_09=" + $("#round_09").val() +
+				"&round_10=" + $("#round_10").val() +
+                "&round_11=" + $("#round_11").val() +
+				"&round_12=" + $("#round_12").val() +
+                "&round_13=" + $("#round_13").val() +
+				"&round_14=" + $("#round_14").val() +
+                "&round_15=" + $("#round_15").val() +
+				"&round_16=" + $("#round_16").val() +
+                "&round_17=" + $("#round_17").val() +
+				"&round_18=" + $("#round_18").val()   
+            ).done(function( msg ) { 
+                $("#content").html( msg );
+            });
+        }
+    </script>
+    <style>
+        .btn {
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>
+
